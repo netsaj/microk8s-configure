@@ -1,0 +1,6 @@
+{
+  "debug" : true,
+  "insecure-registries" : ["localhost:32000",""],
+  "disable-legacy-registry": true,
+  "allow-nondistributable-artifacts": ["localhost:32000"]
+}
