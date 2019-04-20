@@ -66,6 +66,10 @@ def main():
     out = connection.exec("snap install microk8s --classic --channel=1.13/stable")
     out = "installed. " if out.find("installed") > 0 else "Not installed"
     print(out)
+    print(colored("install helm ....", "green", attrs=['bold']))
+    out = connection.exec("snap install helm --classic")
+    out = "installed. " if out.find("installed") > 0 else "Not installed"
+    print(out)
     connection.exec("snap alias microk8s.kubectl kubectl")
 
     # ---------- #
@@ -97,6 +101,9 @@ def main():
     # enabled docker registry
     print(colored(" - enable plugins registry", "blue"))
     out = connection.exec("/snap/bin/microk8s.enable registry")
+    print("  ", out.split("\n")[-2])
+    print(colored(" - enable plugins dns", "blue"))
+    out = connection.exec("/snap/bin/microk8s.enable dns")
     print("  ", out.split("\n")[-2])
 
     # ---------- #

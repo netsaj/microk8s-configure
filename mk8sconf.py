@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-from microk8s_configure.main import main
+from mk8sconfig.main import main
 
 main()
