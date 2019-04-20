@@ -4,9 +4,9 @@ from argparse import ArgumentParser
 
 from tqdm import tqdm
 from termcolor import colored
-from microk8s_configure.ssh_connection import SSHConnect
+from mk8sconfig.ssh_connection import SSHConnect
 
-__version__ = "0.0.2"
+__version__ = "0.0.4"
 
 user = ""
 password = ""
