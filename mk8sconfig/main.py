@@ -105,6 +105,9 @@ def main():
     print(colored(" - enable plugins dns", "blue"))
     out = connection.exec("/snap/bin/microk8s.enable dns")
     print("  ", out.split("\n")[-2])
+    print(colored(" - enable plugins dashbaord", "blue"))
+    out = connection.exec("/snap/bin/microk8s.enable dashboard")
+    print("  ", out.split("\n")[-2])
 
     # ---------- #
     # enabled docker registry for external push
