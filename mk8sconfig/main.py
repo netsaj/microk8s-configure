@@ -6,7 +6,7 @@ from tqdm import tqdm
 from termcolor import colored
 from mk8sconfig.ssh_connection import SSHConnect
 
-__version__ = "0.0.4"
+__version__ = "0.0.7"
 
 user = ""
 password = ""
@@ -62,8 +62,11 @@ def main():
 
     # ---------- #
     # install snap microk8s
+    print(colored("install snapd ....", "green", attrs=['bold']))
+    out = connection.exec(" apt install snapd --yes")
+    print(out)
     print(colored("install microk8s ....", "green", attrs=['bold']))
-    out = connection.exec("snap install microk8s --classic --channel=1.13/stable")
+    out = connection.exec("snap install microk8s --classic --channel=1.14")
     out = "installed. " if out.find("installed") > 0 else "Not installed"
     print(out)
     print(colored("install helm ....", "green", attrs=['bold']))
