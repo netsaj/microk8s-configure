@@ -23,7 +23,7 @@ setup(
     ],
     install_requires=[
         'paramiko==2.4.2',
-        'cryptography==2.4.2',
+        'cryptography==3.2',
         'termcolor==1.1.0',
         'tqdm==4.31.1',
     ],
