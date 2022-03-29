@@ -22,7 +22,7 @@ setup(
         "Programming Language :: Python :: 3.6",
     ],
     install_requires=[
-        'paramiko==2.4.2',
+        'paramiko==2.10.1',
         'cryptography==2.4.2',
         'termcolor==1.1.0',
         'tqdm==4.31.1',
